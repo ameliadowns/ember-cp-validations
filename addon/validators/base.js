@@ -102,7 +102,7 @@ export default Ember.Object.extend({
     }
 
     message = message || defaultMessages.invalid;
-    message = Ember.String.fmt(message, ...formats);
+    message = `${message}{formats}`;
 
     return (attribute + message).trim();
   }
